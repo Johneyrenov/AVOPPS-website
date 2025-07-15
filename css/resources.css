@@ -1,6 +1,4 @@
-/* Styles spécifiques à la page Ressources */
 
-/* Bannière hero */
 .resources-hero {
     height: 60vh;
     background: linear-gradient(rgba(46, 125, 50, 0.8), rgba(46, 125, 50, 0.8)), url('../images/resources-bg.jpg');
@@ -26,12 +24,10 @@
     margin: 0 auto 2rem;
 }
 
-/* Conteneur principal */
 .resources-container {
     padding: 3rem 10%;
 }
 
-/* Barre de recherche et filtres */
 .search-filters {
     background-color: var(--light-gray);
     padding: 2rem;
@@ -107,7 +103,6 @@
     color: var(--secondary-color);
 }
 
-/* Résultats de recherche */
 .results-header {
     display: flex;
     justify-content: space-between;
@@ -278,7 +273,6 @@
     color: var(--secondary-color);
 }
 
-/* Newsletter */
 .newsletter-section {
     background-color: var(--light-gray);
     padding: 4rem 10%;
@@ -306,6 +300,8 @@
 
 .newsletter-form {
     flex: 1;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
     min-width: 300px;
     display: flex;
     gap: 0.5rem;
@@ -323,7 +319,6 @@
     white-space: nowrap;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .resources-hero .hero-content h1 {
         font-size: 2.5rem;

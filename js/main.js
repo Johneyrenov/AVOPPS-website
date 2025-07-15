@@ -1,16 +1,12 @@
-// Menu burger pour mobile
 const burger = document.querySelector('.burger');
 const navLinks = document.querySelector('.nav-links');
 const navLinksItems = document.querySelectorAll('.nav-links li');
 
 burger.addEventListener('click', () => {
-    // Toggle navigation
     navLinks.classList.toggle('active');
-    
-    // Animation burger
+
     burger.classList.toggle('toggle');
     
-    // Animation des liens
     navLinksItems.forEach((link, index) => {
         if (link.style.animation) {
             link.style.animation = '';
@@ -20,11 +16,9 @@ burger.addEventListener('click', () => {
     });
 });
 
-// Chargement dynamique des actualités
 document.addEventListener('DOMContentLoaded', function() {
     const newsContainer = document.getElementById('news-container');
     
-    // Données des actualités (en pratique, vous pourriez les charger depuis une API)
     const newsData = [
         {
             title: "Atelier sur la santé mentale",
@@ -45,8 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
             image: "pictures/news3.jpg"
         }
     ];
-    
-    // Génération des cartes d'actualités
+
     newsData.forEach(news => {
         const newsCard = document.createElement('div');
         newsCard.className = 'news-card';
@@ -65,8 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         newsContainer.appendChild(newsCard);
     });
-    
-    // Animation au défilement
+
     const observerOptions = {
         threshold: 0.1
     };
@@ -84,24 +76,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Gestion des formulaires (exemple pour le formulaire de contact)
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Récupération des valeurs
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
         
-        // Validation simple
         if (!name || !email || !message) {
             alert('Veuillez remplir tous les champs');
             return;
         }
         
-        // Envoi des données (ici juste un exemple)
         console.log('Formulaire soumis:', { name, email, message });
         alert('Merci pour votre message. Nous vous contacterons bientôt!');
         contactForm.reset();

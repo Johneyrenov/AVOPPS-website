@@ -371,7 +371,6 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <div class="logo-container">
             <img src="pictures/image.png" alt="Logo AVOPPS" class="logo">
@@ -381,10 +380,9 @@
             </div>
         </div>
         
-        <!-- Navigation -->
         <nav class="navbar">
             <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html" class="active">Accueil</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="maintenance.html">Ressources</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -397,7 +395,6 @@
         </nav>
     </header>
 
-    <!-- Contenu principal -->
     <main class="maintenance-hero">
         <div class="construction-container">
             <div class="construction-icon">
@@ -482,9 +479,7 @@
         </div>
     </footer>
     
-    <!-- Scripts -->
     <script>
-        // Date de lancement prévue (7 jours dans le futur)
         const launchDate = new Date();
         launchDate.setDate(launchDate.getDate() + 31);
         
@@ -509,11 +504,9 @@
             }
         }
         
-        // Mise à jour toutes les secondes pour un compte à rebours fluide
         updateCountdown();
         setInterval(updateCountdown, 1000);
-        
-        // Animation des éléments au chargement
+
         document.addEventListener('DOMContentLoaded', () => {
             const elements = [
                 '.construction-icon',
