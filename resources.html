@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ressources - AVOPPS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/resources.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- En-tête -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="pictures/image.png" alt="Logo AVOPPS" class="logo">
+            <div class="org-name">
+                <h1>AVOPPS</h1>
+                <p>Action et Volontariat de Prise en Charge Psychosociale</p>
+            </div>
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="resources.html" class="active">Ressources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Bannière des ressources -->
+    <section class="resources-hero">
+        <div class="hero-content">
+            <h1>Ressources</h1>
+            <p>Documents, guides et outils pour votre bien-être et développement</p>
+        </div>
+    </section>
+
+    <!-- Contenu principal -->
+    <main class="resources-container">
+        <!-- Barre de recherche et filtres -->
+        <section class="search-filters">
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher une ressource..." id="resource-search">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="category-filter">Catégorie :</label>
+                    <select id="category-filter">
+                        <option value="all">Toutes les catégories</option>
+                        <option value="psychosocial">Santé psychosociale</option>
+                        <option value="education">Éducation</option>
+                        <option value="economie">Économie sociale</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="type-filter">Type :</label>
+                    <select id="type-filter">
+                        <option value="all">Tous les types</option>
+                        <option value="document">Documents PDF</option>
+                        <option value="video">Vidéos</option>
+                        <option value="article">Articles</option>
+                    </select>
+                </div>
+                
+                <button id="reset-filters" class="btn-outline">Réinitialiser</button>
+            </div>
+        </section>
+
+        <!-- Résultats de recherche -->
+        <section class="resources-results">
+            <div class="results-header">
+                <h2>Ressources disponibles</h2>
+                <div class="sort-options">
+                    <label for="sort-by">Trier par :</label>
+                    <select id="sort-by">
+                        <option value="date-desc">Date (récent au plus ancien)</option>
+                        <option value="date-asc">Date (ancien au plus récent)</option>
+                        <option value="title-asc">Titre (A-Z)</option>
+                        <option value="title-desc">Titre (Z-A)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="resources-grid" id="resources-grid">
+                <!-- Les ressources seront chargées dynamiquement via JavaScript -->
+            </div>
+            
+            <div class="pagination">
+                <button id="prev-page" disabled><i class="fas fa-chevron-left"></i> Précédent</button>
+                <div class="page-numbers" id="page-numbers"></div>
+                <button id="next-page">Suivant <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- Section newsletter -->
+        <section class="newsletter-section">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Restez informé</h2>
+                    <p>Abonnez-vous à notre newsletter pour recevoir les nouvelles ressources directement dans votre boîte email.</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre adresse email" required>
+                    <button type="submit" class="btn">S'abonner</button>
+                </form>
+            </div>
+        </section> 
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>AVOPPS</h3>
+                <p>Action et Volontariat de Prise en Charge Psychosociale</p>
+                <p>#101, Rue Louverture, Petite Rivière de l'Artibonite, Haïti</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="resources.html">Ressources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contactez-nous</h3>
+                <p><i class="fas fa-phone"></i> (509) 49 11 13 90</p>
+                <p><i class="fas fa-envelope"></i> avopps12@gmail.com</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AVOPPS. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/resources.js"></script>
+</body>
+</html>

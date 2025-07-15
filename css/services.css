@@ -1,0 +1,579 @@
+/* Styles spécifiques à la page Services */
+
+/* Bannière hero */
+.services-hero {
+    height: 60vh;
+    background: linear-gradient(rgba(46, 125, 50, 0.8), rgba(46, 125, 50, 0.8)), url('../images/services-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--secondary-color);
+    margin-top: 80px;
+}
+
+.services-hero .hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.services-hero .hero-content p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+/* Navigation entre services */
+.services-nav {
+    background-color: var(--light-gray);
+    padding: 1rem 10%;
+    position: sticky;
+    top: 80px;
+    z-index: 900;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.services-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+.services-nav a {
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.services-nav a:hover, .services-nav a.active {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* Conteneur principal */
+.services-container {
+    padding: 3rem 10%;
+}
+
+/* Sections de services */
+.service-section {
+    display: none;
+    padding: 2rem 0;
+}
+
+.service-section.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.service-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.service-header i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-right: 1.5rem;
+}
+
+.service-header h2 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+/* Contenu des services */
+.service-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.service-description {
+    line-height: 1.8;
+}
+
+.service-description h3 {
+    color: var(--primary-color);
+    margin: 2rem 0 1rem;
+    font-size: 1.5rem;
+}
+
+/* Grille d'activités */
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.activity-card {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+}
+
+.activity-card i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.activity-card h4 {
+    margin-bottom: 0.8rem;
+    color: var(--primary-color);
+}
+
+/* Témoignages */
+.service-testimonials {
+    background-color: var(--light-gray);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.testimonials-slider {
+    position: relative;
+    min-height: 150px;
+    margin: 2rem 0;
+}
+
+.testimonial {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    text-align: center;
+}
+
+.testimonial.active {
+    opacity: 1;
+}
+
+.testimonial p {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial span {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.slider-controls button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.slider-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.slider-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.slider-dot.active {
+    background-color: var(--primary-color);
+}
+
+/* Accordéon pour les programmes */
+.programs-accordion {
+    margin: 2rem 0;
+}
+
+.accordion-item {
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.accordion-header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.accordion-header h4 {
+    margin: 0;
+}
+
+.accordion-header i {
+    transition: transform 0.3s;
+}
+
+.accordion-item.active .accordion-header i {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    background-color: var(--secondary-color);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 500px;
+    padding: 1.5rem;
+}
+
+.accordion-content ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.accordion-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* Statistiques */
+.service-stats {
+    background-color: var(--light-gray);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.stat-card {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+}
+
+/* Onglets pour les initiatives */
+.initiatives-tabs {
+    margin: 2rem 0;
+}
+
+.tabs-header {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--text-color);
+    position: relative;
+}
+
+.tab-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.tab-btn.active::after {
+    transform: scaleX(1);
+}
+
+.tab-panel {
+    display: none;
+    padding: 1rem 0;
+    animation: fadeIn 0.5s ease;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+/* Projets */
+.service-projects {
+    margin: 3rem 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.project-card {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h4 {
+    padding: 1rem 1rem 0;
+    color: var(--primary-color);
+}
+
+.project-card p {
+    padding: 0 1rem 1rem;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0 1rem 1rem;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.project-link:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* Boutons CTA */
+.service-cta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .services-hero .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .services-hero .hero-content p {
+        font-size: 1.2rem;
+    }
+    
+    .services-nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .service-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .service-header i {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .tabs-header {
+        flex-direction: column;
+    }
+    
+    .service-cta {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+/* Ajouts et modifications pour améliorer le responsive */
+
+/* Grille des ressources - Adaptation mobile */
+.resources-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+@media (max-width: 640px) {
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Filtres - Meilleure organisation mobile */
+.filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+@media (max-width: 500px) {
+    .filters {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .filter-group select {
+        width: 100%;
+    }
+}
+
+/* Pagination - Adaptation mobile */
+.pagination {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.page-numbers {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 400px) {
+    .pagination button {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .page-number {
+        padding: 0.5rem 0.7rem;
+    }
+}
+
+/* Newsletter - Optimisation mobile */
+.newsletter-form {
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.newsletter-form input,
+.newsletter-form button {
+    width: 100%;
+}
+
+/* Cartes de ressources - Amélioration mobile */
+.resource-card {
+    min-width: 0; /* Empêche le dépassement */
+}
+
+.resource-content {
+    padding: 1.2rem;
+}
+
+@media (max-width: 400px) {
+    .resource-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+}
+
+/* En-tête des résultats - Correction mobile */
+.results-header {
+    gap: 1rem;
+}
+
+.sort-options {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+@media (max-width: 500px) {
+    .sort-options {
+        width: 100%;
+    }
+    
+    .sort-options select {
+        flex-grow: 1;
+    }
+}

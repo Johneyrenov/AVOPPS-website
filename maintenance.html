@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service en développement - AVOPPS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        :root {
+            --primary: #2e7d32;
+            --primary-light: #81c784;
+            /* --primary-dark: #1b5e20; */
+            --white: #ffffff;
+            --light-bg: #f8f9fa;
+            --light-gray: #e9ecef;
+            --text: #333333;
+            --text-light: #555555;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-bg);
+            color: var(--text);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            padding: 1rem 5%;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 100;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo {
+            height: 50px;
+            width: auto;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+        
+        .org-name h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.2rem;
+            font-weight: 700;
+        }
+        
+        .org-name p {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+        
+        /* Contenu principal */
+        .maintenance-hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 5% 6rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .maintenance-hero::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(129, 199, 132, 0.1);
+            border-radius: 50%;
+            z-index: -1;
+        }
+        
+        .maintenance-hero::after {
+            content: "";
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            background-color: rgba(46, 125, 50, 0.1);
+            border-radius: 50%;
+            z-index: -1;
+        }
+        
+        .construction-container {
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+        
+        .construction-icon {
+            font-size: 5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            animation: bounce 2s infinite ease-in-out;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .construction-icon::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+            background-color: rgba(129, 199, 132, 0.2);
+            border-radius: 50%;
+            z-index: -1;
+        }
+        
+        .maintenance-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 3rem;
+            max-width: 700px;
+            width: 100%;
+            box-shadow: var(--shadow-md);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .maintenance-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--primary-light));
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            background: linear-gradient(to right, var(--primary), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.3;
+        }
+        
+        .maintenance-content {
+            margin-bottom: 2rem;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        .countdown-container {
+            background: rgba(46, 125, 50, 0.08);
+            border-radius: 12px;
+            padding: 1.8rem;
+            margin: 2.5rem 0;
+            border: 1px solid rgba(46, 125, 50, 0.1);
+        }
+        
+        .countdown-title {
+            font-size: 1rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 70px;
+        }
+        
+        .countdown-value {
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 1.2rem;
+            border-radius: 8px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 4px 0 rgba(0,0,0,0.1);
+        }
+        
+        .countdown-label {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .options {
+            display: flex;
+            gap: 1.2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2.5rem;
+        }
+        
+        .option-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .option-btn:hover {
+            background: var(--primary-light);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(46, 125, 50, 0.4);
+        }
+        
+        .option-btn:active {
+            transform: translateY(1px);
+        }
+        
+        .option-btn i {
+            font-size: 1.1rem;
+        }
+        
+        
+        /* Animations */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .maintenance-card {
+                padding: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+                padding: 1.5rem 5%;
+            }
+            
+            .maintenance-hero {
+                padding: 3rem 5% 4rem;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .countdown {
+                gap: 0.8rem;
+            }
+            
+            .countdown-item {
+                min-width: 60px;
+            }
+            
+            .countdown-value {
+                padding: 0.6rem 1rem;
+                font-size: 1.5rem;
+            }
+            
+            .options {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .option-btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .maintenance-card {
+                padding: 2rem 1.5rem;
+                border-radius: 12px;
+            }
+            
+            .construction-icon {
+                font-size: 4rem;
+            }
+            
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+            
+            .countdown-container {
+                padding: 1.5rem 1rem;
+            }
+            
+            .countdown-item {
+                min-width: 50px;
+            }
+            
+            .countdown-value {
+                font-size: 1.3rem;
+                padding: 0.5rem 0.8rem;
+            }
+            
+            .footer {
+                padding: 2rem 5% 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="pictures/image.png" alt="Logo AVOPPS" class="logo">
+            <div class="org-name">
+                <h1>AVOPPS</h1>
+                <p>Action et Volontariat de Prise en Charge Psychosociale</p>
+            </div>
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="maintenance.html">Ressources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenu principal -->
+    <main class="maintenance-hero">
+        <div class="construction-container">
+            <div class="construction-icon">
+                <i class="fas fa-hammer"></i>
+            </div>
+        </div>
+        
+        <div class="maintenance-card" style="opacity: 0; transform: translateY(20px); animation: fadeIn 0.6s 0.2s forwards;">
+            <div class="maintenance-content">
+                <h1>Amélioration en cours</h1>
+                <p>Nous travaillons activement sur cette section pour vous offrir une expérience optimale. Notre équipe déploie tous ses efforts pour finaliser ce service dans les meilleurs délais.</p>
+                <p>Merci pour votre patience et votre compréhension.</p>
+            </div>
+            
+            <div class="countdown-container">
+                <div class="countdown-title">Disponible dans:</div>
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="days">31</div>
+                        <div class="countdown-label">jours</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="hours">23</div>
+                        <div class="countdown-label">heures</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="minutes">59</div>
+                        <div class="countdown-label">minutes</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="options">
+                <a href="contact.html" class="option-btn">
+                    <i class="fas fa-envelope"></i> Nous contacter
+                </a>
+                <a href="services.html" class="option-btn">
+                    <i class="fas fa-list-ul"></i> Services disponibles
+                </a>
+                <a href="index.html" class="option-btn">
+                    <i class="fas fa-home"></i> Retour à l'accueil
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section footer-about">
+                <h3>À propos d'AVOPPS</h3>
+                <p>Action et Volontariat de Prise en Charge Psychosociale, œuvrant pour le bien-être des communautés à travers des programmes de soutien psychosocial, d'éducation et d'économie solidaire.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section footer-links">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+                    <li><a href="services.html"><i class="fas fa-chevron-right"></i> Nos services</a></li>
+                    <li><a href="resources.html"><i class="fas fa-chevron-right"></i> Ressources</a></li>
+                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-section footer-contact">
+                <h3>Contactez-nous</h3>
+                <p><i class="fas fa-map-marker-alt"></i> #101, Rue Louverture, Petite Rivière de l'Artibonite, Haïti</p>
+                <p><i class="fas fa-phone"></i> (509) 49 11 13 90</p>
+                <p><i class="fas fa-envelope"></i> avopps12@gmail.com</p>
+                <p><i class="fas fa-clock"></i> Lundi-Vendredi: 8h00-16h00</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 AVOPPS. Tous droits réservés. | <a href="#">Politique de confidentialité</a> | <a href="#">Conditions d'utilisation</a></p>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script>
+        // Date de lancement prévue (7 jours dans le futur)
+        const launchDate = new Date();
+        launchDate.setDate(launchDate.getDate() + 31);
+        
+        function updateCountdown() {
+            const now = new Date();
+            const diff = launchDate - now;
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            
+            if (diff <= 0) {
+                document.querySelector('.countdown-container').innerHTML = `
+                    <div style="color: var(--primary); font-weight: 700; font-size: 1.2rem; padding: 1rem;">
+                        Le service est maintenant disponible!
+                    </div>
+                `;
+            }
+        }
+        
+        // Mise à jour toutes les secondes pour un compte à rebours fluide
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+        
+        // Animation des éléments au chargement
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = [
+                '.construction-icon',
+                '.maintenance-content h1',
+                '.maintenance-content p',
+                '.countdown-container',
+                '.options'
+            ];
+            
+            elements.forEach((selector, index) => {
+                const el = document.querySelector(selector);
+                if (el) {
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(20px)';
+                    el.style.animation = `fadeIn 0.5s ${index * 0.15 + 0.3}s forwards`;
+                }
+            });
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
