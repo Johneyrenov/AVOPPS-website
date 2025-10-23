@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <span>${formatDate(resource.date)}</span>
                         ${resource.downloads ? `<span>${resource.downloads} téléchargements</span>` : `<span>${resource.views} vues</span>`}
                     </div>
-                    <a href="#" class="resource-download">
+                    <a href="sources.pdf" download class="resource-download">
                         <i class="${iconClass}"></i> ${resource.type === 'document' ? 'Télécharger' : resource.type === 'video' ? 'Regarder' : 'Lire'}
                     </a>
                 </div>

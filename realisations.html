@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Réalisations - AVOPPS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/realisations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="pictures/image.png">
+</head>
+<body>
+    <!-- Navigation principale -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="pictures/image.png" alt="Logo AVOPPS" class="logo">
+            <div class="org-name">
+                <h1>AVOPPS</h1>
+                <p>Action et Volontariat de Prise en Charge Psychosociale</p>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="realisations.html" class="active">Réalisations</a></li>
+                <!-- <li><a href="resources.html">Ressources</a></li> -->
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section Cinématique -->
+    <section class="cinematic-hero">
+        <div class="hero-canvas">
+            <canvas id="particleCanvas"></canvas>
+            <div class="gradient-overlay"></div>
+            <div class="floating-elements">
+                <div class="floating-icon" style="--delay: 0s;">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="floating-icon" style="--delay: 1s;">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <div class="floating-icon" style="--delay: 2s;">
+                    <i class="fas fa-seedling"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="title-container">
+                <h1 class="main-title">
+                    <span class="title-word">L'Impact</span>
+                    <span class="title-word highlight">Concret</span>
+                    <span class="title-word">d'AVOPPS</span>
+                </h1>
+                <div class="title-underline">
+                    <div class="underline-bar"></div>
+                </div>
+            </div>
+            
+            <p class="hero-subtitle">
+                10 projets transformateurs réalisés, touchant plus de 1500 bénéficiaires à travers Haïti
+            </p>
+            
+            <div class="hero-stats">
+                <div class="stat-circle">
+                    <div class="circle-progress" data-value="10">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle class="progress-ring-circle" stroke-width="4" fill="transparent" r="52" cx="60" cy="60"/>
+                        </svg>
+                        <div class="stat-content">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Projets Réalisés</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stat-circle">
+                    <div class="circle-progress" data-value="1500">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle class="progress-ring-circle" stroke-width="4" fill="transparent" r="52" cx="60" cy="60"/>
+                        </svg>
+                        <div class="stat-content">
+                            <span class="stat-number">0</span>
+                            <span class="stat-label">Bénéficiaires</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stat-circle">
+                    <div class="circle-progress" data-value="5">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle class="progress-ring-circle" stroke-width="4" fill="transparent" r="52" cx="60" cy="60"/>
+                        </svg>
+                        <div class="stat-content">
+                            <span class="stat-number">0</span>
+                            <span class="stat-label">Communautés</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Sticky Élégante -->
+    <nav class="category-nav">
+        <div class="nav-container">
+            <div class="nav-scroll">
+                <a href="#psychosocial" class="nav-item active" data-category="psychosocial">
+                    <div class="nav-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <span>Santé Mentale</span>
+                    <div class="nav-dot"></div>
+                </a>
+                
+                <a href="#education" class="nav-item" data-category="education">
+                    <div class="nav-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <span>Éducation</span>
+                    <div class="nav-dot"></div>
+                </a>
+                
+                <a href="#economie" class="nav-item" data-category="economie">
+                    <div class="nav-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <span>Économie Solidaire</span>
+                    <div class="nav-dot"></div>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Réalisations Principale -->
+    <main class="realisations-gallery">
+        <!-- ===== SANTÉ PSYCHOSOCIALE ===== -->
+        <section id="psychosocial" class="category-section active">
+            <div class="section-intro">
+                <div class="intro-content">
+                    <div class="category-marker">
+                        <span>01</span>
+                        <div class="marker-line"></div>
+                    </div>
+                    <h2 class="section-title">
+                        <span class="title-pre">Santé</span>
+                        <span class="title-main">Psychosociale</span>
+                    </h2>
+                    <p class="section-description">
+                        6 programmes innovants dédiés au bien-être mental et à la résilience communautaire
+                    </p>
+                    <div class="section-stats">
+                        <div class="mini-stat">
+                            <span class="number">70+</span>
+                            <span class="label">Consultations</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="number">5</span>
+                            <span class="label">Professionnels</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="number">96%</span>
+                            <span class="label">Satisfaction</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="realisations-grid">
+                <!-- Réalisation -->
+                <article class="realisation-card featured" data-id="1">
+                    <div class="card-visual">
+                        <div class="card-image">
+                            <img src="pictures/Prise_en_charge.jpg" alt="Centre de soutien psychosocial">
+                            <div class="image-overlay">
+                            </div>
+                        </div>
+                        <div class="card-badges">
+                            <span class="badge primary">Projet Phare</span>
+                            <span class="badge success">Complété</span>
+                            <span class="badge impact">Impact Élevé</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span class="card-category">Santé Psychosociale</span>
+                            <h3 class="card-title">Appui psychosocial aux parents en déplacement, en raison de l’insécurité à 
+                                Petite Rivière de l’Artibonite de concert avec KPLL (Konbit Pou Lapè Lakay).</h3>
+                        </div>
+                        
+                        <p class="card-excerpt">
+                            Pour marquer la fête des Pères, des déplacés ont reçu des plats chauds préparés avec amour. 
+                            Cette initiative a permis de leur offrir non seulement un repas, 
+                            mais aussi un moment de joie et de reconnaissance au milieu des difficultés qu’ils traversent.
+                        </p>
+                        
+                        <div class="card-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-user-friends"></i>
+                                <span>100 bénéficiaires directs</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>2024 - 2025</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Petite Rivière de l'Artibonite</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-progress">
+                            <div class="progress-info">
+                                <span class="progress-label">Avancement du projet</span>
+                                <span class="progress-value">100%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-bar" style="width: 100%">
+                                    <div class="progress-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-actions">
+                            <a href="realisation-psychosocial.html" class="btn-primary">
+                                <span class="btn-text">Découvrir en détail</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Réalisation 2 -->
+                <!-- <article class="realisation-card" data-id="2">
+                    <div class="card-visual">
+                        <div class="card-image">
+                            <img src="images/groupes-parole.jpg" alt="Groupes de parole thérapeutiques">
+                        </div>
+                        <div class="card-badges">
+                            <span class="badge success">En Cours</span>
+                            <span class="badge impact">Impact Moyen</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span class="card-category">Santé Psychosociale</span>
+                            <h3 class="card-title">Programme de Groupes de Parole Thérapeutiques</h3>
+                        </div>
+                        
+                        <p class="card-excerpt">
+                            Sessions régulières de partage et de soutien mutuel pour faciliter 
+                            la guérison des traumatismes collectifs.
+                        </p>
+                        
+                        <div class="card-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-users"></i>
+                                <span>200 participants réguliers</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Mai 2023 - Présent</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-clock"></i>
+                                <span>24 sessions réalisées</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-progress">
+                            <div class="progress-info">
+                                <span class="progress-label">Avancement du programme</span>
+                                <span class="progress-value">85%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-bar" style="width: 85%">
+                                    <div class="progress-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-actions">
+                            <a href="realisation-details.html?id=2" class="btn-primary">
+                                <span class="btn-text">Voir les détails</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article> -->
+
+                <!-- Ajouter les réalisations pour la santé psychosociale -->
+            </div>
+        </section>
+
+        <!-- ===== ÉDUCATION ===== -->
+        <section id="education" class="category-section">
+            <div class="section-intro">
+                <div class="intro-content">
+                    <div class="category-marker">
+                        <span>02</span>
+                        <div class="marker-line"></div>
+                    </div>
+                    <h2 class="section-title">
+                        <span class="title-pre">Éducation</span>
+                        <span class="title-main">& Formation</span>
+                    </h2>
+                    <p class="section-description">
+                        5 programmes éducatifs innovants pour l'autonomisation des communautés
+                    </p>
+                    <div class="section-stats">
+                        <div class="mini-stat">
+                            <span class="number">600+</span>
+                            <span class="label">Apprenants </span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="number">20+</span>
+                            <span class="label">Écoles partenaires</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="number">85%</span>
+                            <span class="label">Réussite</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="realisations-grid">
+                <article class="realisation-card featured" data-id="7">
+                    <div class="card-visual">
+                        <div class="card-image">
+                            <img src="pictures/Programme_formation1.jpg" alt="Programme d'alphabétisation">
+                        </div>
+                        <div class="card-badges">
+                            <span class="badge primary">Projet Phare</span>
+                            <span class="badge success">Complété</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span class="card-category">Éducation</span>
+                            <h3 class="card-title">Séminaire sur la Psychologie de l’enfant et de l’adolescent</h3>
+                        </div>
+                        
+                        <p class="card-excerpt">
+                            Dans le cadre de ses activités de formation et de sensibilisation, un séminaire éducatif a été animé par Adly ARTHUR autour du thème « Psychologie de l’enfant et de l’adolescent ».
+                            Cette initiative visait à outiller les jeunes participants sur les notions essentielles du développement affectif, cognitif et social des enfants et des adolescents.
+                        </p>
+                        
+                        <div class="card-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-book-open"></i>
+                                <span>100 jeunes et enseignants</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>2019</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>95% de réussite</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-actions">
+                            <a href="realisation-seminaire-psychologie.html" class="btn-primary">
+                                <span class="btn-text">Voir les résultats</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+
+
+                <article class="realisation-card featured" data-id="1">
+                    <div class="card-visual">
+                        <div class="card-image">
+                            <img src="pictures/Programme_éducation1.jpg" alt="Centre de soutien psychosocial">
+                            
+                        </div>
+                        <div class="card-badges">
+                            <span class="badge primary">Projet Phare</span>
+                            <span class="badge success">Complété</span>
+                            <span class="badge impact">Impact Élevé</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span class="card-category">Éducation</span>
+                            <h3 class="card-title">Accompagnement et formation professionnelle pour les jeunes écoliers.</h3>
+                        </div>
+                        
+                        <p class="card-excerpt">
+                            Chaque année, cent (100) jeunes bénéficient d’une formation complète sur l’orientation professionnelle, 
+                            visant à les aider à mieux définir leur parcours académique et à faire des choix éclairés pour leur avenir.
+                            Parallèlement, plus d’une vingtaine d’écoles participent chaque année au traditionnel concours du Génie scolaire
+                             de la Petite Rivière de l’Artibonite, un événement qui stimule l’esprit de compétition, de collaboration et d’excellence chez les élèves.
+                        </p>
+                        
+                        <div class="card-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-user-friends"></i>
+                                <span>100 Jeunes</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>2013 - 2025</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Petite Rivière de l'Artibonite</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-progress">
+                            <div class="progress-info">
+                                <span class="progress-label">Avancement du projet</span>
+                                <span class="progress-value">100%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-bar" style="width: 100%">
+                                    <div class="progress-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-actions">
+                            <a href="realisation-education1.html" class="btn-primary">
+                                <span class="btn-text">Découvrir en détail</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="realisation-card featured" data-id="1">
+                    <div class="card-visual">
+                        <div class="card-image">
+                            <img src="pictures/2Programme_formation2.jpg" alt="Centre de soutien psychosocial">
+                            
+                        </div>
+                        <div class="card-badges">
+                            <span class="badge primary">Projet Phare</span>
+                            <span class="badge success">Complété</span>
+                            <span class="badge impact">Impact Élevé</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span class="card-category">Éducation</span>
+                            <h3 class="card-title">Projet de sensibilisation et de prévention contre la grossesse précoce</h3>
+                        </div>
+                        
+                        <p class="card-excerpt">
+                            Un projet de sensibilisation et de prévention contre la grossesse précoce a été réalisé avec succès, visant à informer et éduquer les jeunes sur les risques liés aux grossesses précoces.
+                            Une initiative qui a permis de renforcer la conscience des adolescents et de promouvoir des comportements responsables au sein de la communauté.
+                        </p>
+                        
+                        <div class="card-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-user-friends"></i>
+                                <span>100 Jeunes</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>2014</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Petite Rivière de l'Artibonite</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-progress">
+                            <div class="progress-info">
+                                <span class="progress-label">Avancement du projet</span>
+                                <span class="progress-value">100%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-bar" style="width: 100%">
+                                    <div class="progress-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-actions">
+                            <a href="realisation-grossesse-precoce.html" class="btn-primary">
+                                <span class="btn-text">Découvrir en détail</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </article>
+
+
+
+                <!-- Ajouter les réalisations pour l'éducation -->
+            </div>
+        </section>
+
+        <!-- ===== ÉCONOMIE SOLIDAIRE ===== -->
+        <section id="economie" class="category-section">
+            <div class="section-intro">
+                <div class="intro-content">
+                    <div class="category-marker">
+                        <span>03</span>
+                        <div class="marker-line"></div>
+                    </div>
+                    <h2 class="section-title">
+                        <span class="title-pre">Économie</span>
+                        <span class="title-main">Solidaire</span>
+                    </h2>
+                    <p class="section-description">
+                        2 initiatives pour l'autonomisation économique des femmes et des jeunes
+                    </p>
+                    <div class="section-stats">
+                        <div class="mini-stat">
+                            <span class="number">135</span>
+                            <span class="label">Entrepreneurs</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="number">15</span>
+                            <span class="label">Micro-entreprises</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="number">85%</span>
+                            <span class="label">Succès</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="realisations-grid">
+                <article class="realisation-card featured" data-id="12">
+                    <div class="card-visual">
+                        <div class="card-image">
+                            <img src="pictures/AService_économie1.jpg" alt="Coopérative de femmes">
+                        </div>
+                        <div class="card-badges">
+                            <span class="badge primary">Projet Phare</span>
+                            <span class="badge success">Terminé</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span class="card-category">Économie Solidaire</span>
+                            <h3 class="card-title">Projet ATECPRA (Assistance Technique et Économique aux Petits commerçants de la Commune de Petite Rivière de l’Artibonite).</h3>
+                        </div>
+                        
+                        <p class="card-excerpt">
+                            Trente (30) petits commerçants ont bénéficié d’une formation complète en marketing, en gestion financière et en protection de l’environnement, leur permettant de renforcer leurs compétences et de pérenniser leurs activités.
+                            Dans le cadre de ce projet à effet multiplicateur, onze (11) commerçants ont également reçu une aide financière de 24 000 gourdes chacun, dans une dynamique de mutuelle solidarité et d’entrepreneuriat communautaire.
+                            Cette initiative a été rendue possible grâce au consortium TPFA (Toujou Pi Fò Ansanm) — composé du Groupe Média Alternatif (GM), CISV, PROGETTOMONDO, GPROSAD, GVC et CONHANE — et financée par l’Union européenne.
+                        </p>
+                        
+                        <div class="card-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-female"></i>
+                                <span>30 petits commerçants</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>11 commerçants soutenus avec 24 000 gourdes chacun.</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>2021 - 2022</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-actions">
+                            <a href="actualite-details-2.html" class="btn-primary">
+                                <span class="btn-text">Découvrir en détail</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="realisation-card featured" data-id="7">
+                    <div class="card-visual">
+                        <div class="card-image">
+                            <img src="pictures/PService_économie3.jpg" alt="Programme d'alphabétisation">
+                        </div>
+                        <div class="card-badges">
+                            <span class="badge primary">Projet Phare</span>
+                            <span class="badge success">Complété</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-content">
+                        <div class="card-header">
+                            <span class="card-category">Économie Solidaire</span>
+                            <h3 class="card-title">Prévention et Gestion du Covid 19 dans un cadre de développement durable</h3>
+                        </div>
+                        
+                        <p class="card-excerpt">
+                            Ensemble, nous avons agi pour freiner la propagation du Covid-19 et renforcer la résilience communautaire. Cent (100) personnes ont été formées et sensibilisées afin de mieux protéger leurs familles et leurs milieux de vie. Le 31 décembre 2020, une vingtaine de kits sanitaires ont été remis aux leaders des écoles, églises, marchés, temples vaudou et centres sportifs de la zone, des espaces clés pour promouvoir l’hygiène et la prévention.
+                            Dans un même élan de solidarité et de relance économique, une dizaine de chèvres ont été distribuées à des organisations communautaires de base partenaires, à travers la signature d’un protocole d’accord (APDAL, MJDH, AJDH, MPH, USH, APD-3, AVOPPS, OPAD, Selil men nan men lavi ka bèl, Selil Tèt Ansanm). Ce mini-projet, financé par le consortium TPFA (Toujou Pi Fò Ansanm) constitué de (Groupe Media alternatif-GM, CISV, PROGETTOMONDO, GPROSAD, GVC, CONHANE) et soutenu par l’Union européenne, témoigne de la force du travail collectif au service du bien-être et du développement durable des communautés locales.
+                        </p>
+                        
+                        <div class="card-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-user-check"></i>
+                                <span>100 Personnes formées  et sensibilisées </span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-medkit"></i>
+                                <span>Kits Sanitaires distribués</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-hippo"></i>
+                                <span>Des chevres distribués</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>2020 - 2021</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-trophy"></i>
+                                <span>100% de réussite</span>
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <a href="realisation-covid19.html" class="btn-primary">
+                                <span class="btn-text">Découvrir en détail</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Ajouter les réalisations pour l'économie solidaire -->
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== RÉALISATIONS - RÉSUMÉ ===== -->
+    <section class="achievements-summary">
+        <div class="summary-container">
+            <h2>10 Réalisations, 1 Mission</h2>
+            <p>Un impact mesurable à travers nos 3 domaines d'intervention</p>
+            
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <div class="summary-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Santé Psychosociale</h3>
+                    <div class="summary-stats">
+                        <span class="stat">2 projets</span>
+                        <span class="stat">200+ bénéficiaires</span>
+                        <span class="stat">96% de satisfaction</span>
+                    </div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="summary-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Éducation</h3>
+                    <div class="summary-stats">
+                        <span class="stat">5 programmes</span>
+                        <span class="stat">950+ apprenants</span>
+                        <span class="stat">95% de réussite</span>
+                    </div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="summary-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Économie Solidaire</h3>
+                    <div class="summary-stats">
+                        <span class="stat">3 initiatives</span>
+                        <span class="stat">320 entrepreneurs</span>
+                        <span class="stat">91% de succès</span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section footer-about">
+                <h3>À propos d'AVOPPS</h3>
+                <p>Action et Volontariat de Prise en Charge Psychosociale, œuvrant pour le bien-être des communautés à travers des programmes de soutien psychosocial, d'éducation et d'économie solidaire.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section footer-links">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+                    <li><a href="services.html"><i class="fas fa-chevron-right"></i> Nos services</a></li>
+                    <li><a href="resources.html"><i class="fas fa-chevron-right"></i> Ressources</a></li>
+                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-section footer-contact">
+                <h3>Contactez-nous</h3>
+                <p><i class="fas fa-map-marker-alt"></i> #101, Rue Louverture, Petite Rivière de l'Artibonite, Haïti</p>
+                <p><i class="fas fa-phone"></i> (509) 49 11 13 90</p>
+                <p><i class="fas fa-envelope"></i> avopps12@gmail.com</p>
+                <p><i class="fas fa-clock"></i> Lundi-Vendredi: 8h00-16h00</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 AVOPPS. Tous droits réservés. | <a href="#">Politique de confidentialité</a> | <a href="#">Conditions d'utilisation</a></p>
+        </div>
+    </footer>
+
+    <script src="js/particles.js"></script>
+    <script src="js/realisations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

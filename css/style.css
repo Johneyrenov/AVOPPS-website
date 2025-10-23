@@ -493,7 +493,7 @@ body {
         right: 0;
         top: 80px;
         background-color: var(--secondary-color);
-        width: 100%;
+        width: 75%;
         flex-direction: column;
         align-items: center;
         padding: 2rem 0;

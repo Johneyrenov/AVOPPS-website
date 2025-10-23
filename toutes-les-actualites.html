@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Réalisations - AVOPPS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/news.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="pictures/image.png">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="pictures/image.png" alt="Logo AVOPPS" class="logo">
+            <div class="org-name">
+                <h1>AVOPPS</h1>
+                <p>Action et Volontariat de Prise en Charge Psychosociale</p>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="realisations.html" class="active">Réalisations</a></li>
+                <li><a href="resources.html">Ressources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="realisations-hero">
+        <div class="hero-content">
+            <h1>Nos Réalisations</h1>
+            <p>Découvrez l'impact concret de nos actions dans la communauté</p>
+            <div class="impact-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="1500">0</span>
+                    <span class="stat-label">Bénéficiaires aidés</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="75">0</span>
+                    <span class="stat-label">Projets réalisés</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="25">0</span>
+                    <span class="stat-label">Communautés touchées</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="realisations-filters">
+        <div class="container">
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher une réalisation..." id="realisation-search">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="filter-options">
+                <div class="filter-group">
+                    <label for="category-filter">Domaine :</label>
+                    <select id="category-filter">
+                        <option value="all">Tous les domaines</option>
+                        <option value="psychosocial">Santé psychosociale</option>
+                        <option value="education">Éducation</option>
+                        <option value="economie">Économie sociale</option>
+                        <option value="infrastructure">Infrastructure</option>
+                        <option value="sante">Santé communautaire</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="impact-filter">Impact :</label>
+                    <select id="impact-filter">
+                        <option value="all">Tous les impacts</option>
+                        <option value="eleve">Impact élevé</option>
+                        <option value="moyen">Impact moyen</option>
+                        <option value="local">Impact local</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="year-filter">Année :</label>
+                    <select id="year-filter">
+                        <option value="all">Toutes les années</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="realisations-container">
+        <div class="container">
+            <div class="realisations-grid" id="realisations-grid">
+                <!-- Les réalisations seront chargées dynamiquement -->
+            </div>
+
+            <div class="realisations-pagination">
+                <button id="prev-page" class="pagination-btn" disabled>
+                    <i class="fas fa-chevron-left"></i> Précédent
+                </button>
+                
+                <div class="page-numbers" id="page-numbers">
+                    <!-- Généré dynamiquement -->
+                </div>
+                
+                <button id="next-page" class="pagination-btn">
+                    Suivant <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <section class="impact-section">
+        <div class="container">
+            <h2>Notre Impact en Chiffres</h2>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Santé Psychosociale</h3>
+                    <div class="impact-numbers">
+                        <span class="number">500+</span>
+                        <span class="label">Consultations réalisées</span>
+                    </div>
+                </div>
+                <div class="impact-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Éducation</h3>
+                    <div class="impact-numbers">
+                        <span class="number">300+</span>
+                        <span class="label">Personnes formées</span>
+                    </div>
+                </div>
+                <div class="impact-card">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>Économie Solidaire</h3>
+                    <div class="impact-numbers">
+                        <span class="number">50+</span>
+                        <span class="label">Projets financés</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <!-- Votre footer existant -->
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/news.js"></script>
+</body>
+</html>

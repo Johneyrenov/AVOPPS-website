@@ -22,21 +22,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const newsData = [
         {
             title: "Atelier sur la santé mentale",
-            date: "15 octobre 2023",
-            excerpt: "Nous organisons un atelier sur la gestion du stress et de l'anxiété.",
-            image: "pictures/news1.jpg"
+            date: "2024 - 2025",
+            excerpt: "Appui psychosocial aux parents en déplacement, en raison de l’insécurité à Petite Rivière de l’Artibonite de concert avec KPLL (Konbit Pou Lapè Lakay).",
+            image: "pictures/Prise_en_charge.jpg"
         },
         {
-            title: "Nouveau programme éducatif",
-            date: "5 octobre 2023",
-            excerpt: "Lancement de notre nouveau programme d'alphabétisation pour adultes.",
-            image: "pictures/SE.png"
+            title: "Programme éducatif",
+            date: "2013 - 2025",
+            excerpt: "Accompagnement et formation professionnelle pour les jeunes écoliers.",
+            image: "pictures/Programme_éducation4.jpg"
         },
         {
             title: "Projet d'économie solidaire",
-            date: "28 septembre 2023",
-            excerpt: "Démarrage d'un nouveau projet d'artisanat local avec 20 participants.",
-            image: "pictures/news3.jpg"
+            date: "2021 - 2022",
+            excerpt: "Réalisation du projet ATECPRA (Assistance Technique et Économique aux Petits commerçants de la Commune de Petite Rivière de l’Artibonite.",
+            image: "pictures/AService_économie1.jpg"
         }
     ];
 
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <p class="news-date">${news.date}</p>
                 <h3 class="news-title">${news.title}</h3>
                 <p class="news-excerpt">${news.excerpt}</p>
-                <a href="#" class="btn-small">Lire plus</a>
+                <a href="realisations.html" class="btn-small">Lire plus</a>
             </div>
         `;
         
