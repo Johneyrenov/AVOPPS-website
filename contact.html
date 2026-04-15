@@ -1,146 +1,151 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - AVOPPS</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" type="image/png" href="pictures/image.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — AVOPPS</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="pictures/image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <header class="header">
-        <div class="logo-container">
-            <img src="pictures/image.png" alt="Logo AVOPPS" class="logo">
-            <div class="org-name">
-                <h1>AVOPPS</h1>
-                <p>Action et Volontariat de Prise en Charge Psychosociale</p>
-            </div>
+
+  <!-- HEADER -->
+  <header class="header" id="mainHeader">
+    <div class="header-inner">
+      <div class="logo-container">
+        <img src="pictures/image.png" alt="Logo AVOPPS" class="logo">
+        <div class="org-name">
+          <h1>AVOPPS</h1>
+          <p>Action et Volontariat de Prise en Charge Psychosociale</p>
         </div>
-        
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="realisations.html">Réalisations</a></li>
-                <!-- <li><a href="resources.html">Ressources</a></li> -->
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
-    </header>
-
-    <main class="contact-page">
-        <section class="contact-info">
-            <h2>Nos coordonnées</h2>
-            
-            <div class="contact-details">
-                <p><i class="fas fa-map-marker-alt"></i> #101, Rue Louverture, Petite Rivière de l'Artibonite, Haïti</p>
-                <p><i class="fas fa-phone"></i> (509) 49 11 13 90</p>
-                <p><i class="fas fa-envelope"></i> avopps12@gmail.com</p>
-                <p><i class="fas fa-clock"></i> Lundi - Vendredi: 8h00 - 16h00</p>
-            </div>
-            
-            <div class="social-links">
-                <h3>Suivez-nous</h3>
-                <div class="social-icons">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-            
-            <h2>Nous trouver</h2>
-            <p>Nous sommes situés à l'adresse suivante :</p>
-            <address>
-              101, Rue Louverture <br>
-              Petite Rivière de l'Artibonite, Haiti
-            </address>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.756052099904!2d-72.48188!3d19.12462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eb6b1e0f0b1e0f1%3A0x1234567890abcdef!2sRue%20Louverture%2C%20Petite%20Rivi%C3%A8re%20de%20l'Artibonite%2C%20Ha%C3%AFti!5e0!3m2!1sfr!2sht!4v1646051602192!5m2!1sfr!2sht" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </section>
-
-    
-        <section class="contact-form-section">
-            <h2>Envoyez-nous un message</h2>
-            
-            <form id="contact-form" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Nom complet *</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="subject">Sujet</label>
-                    <select id="subject" name="subject">
-                        <option value="information">Demande d'information</option>
-                        <option value="consultation">Demande de consultation</option>
-                        <option value="partnership">Proposition de partenariat</option>
-                        <option value="donation">Don/Support</option>
-                        <option value="other">Autre</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Message *</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                
-                <button type="submit" class="submit-btn">Envoyer le message</button>
-            </form>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section footer-about">
-                <h3>À propos d'AVOPPS</h3>
-                <p>Action et Volontariat de Prise en Charge Psychosociale, œuvrant pour le bien-être des communautés à travers des programmes de soutien psychosocial, d'éducation et d'économie solidaire.</p>
-                <div class="footer-social">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-
-            <div class="footer-section footer-links">
-                <h3>Liens rapides</h3>
-                <ul>
-                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
-                    <li><a href="services.html"><i class="fas fa-chevron-right"></i> Nos services</a></li>
-                    <li><a href="resources.html"><i class="fas fa-chevron-right"></i> Ressources</a></li>
-                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
-
-                </ul>
-            </div>
-
-            <div class="footer-section footer-contact">
-                <h3>Contactez-nous</h3>
-                <p><i class="fas fa-map-marker-alt"></i> #101, Rue Louverture, Petite Rivière de l'Artibonite, Haïti</p>
-                <p><i class="fas fa-phone"></i> (509) 49 11 13 90</p>
-                <p><i class="fas fa-envelope"></i> avopps12@gmail.com</p>
-                <p><i class="fas fa-clock"></i> Lundi-Vendredi: 8h00-16h00</p>
-            </div>
+      </div>
+      <nav class="navbar">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="burger" id="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
         </div>
+      </nav>
+    </div>
+  </header>
 
-        <div class="footer-bottom">
-            <p>&copy; 2025 AVOPPS. Tous droits réservés. | <a href="#">Politique de confidentialité</a> | <a href="#">Conditions d'utilisation</a></p>
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <span class="tag">Nous rejoindre</span>
+      <h1>Contact</h1>
+      <div class="h-rule"></div>
+      <p>#101, Rue Louverture — Petite Rivière de l'Artibonite, Haïti</p>
+    </div>
+  </div>
+
+  <!-- CONTENU CONTACT -->
+  <main class="contact-page">
+    <section class="contact-info">
+      <h2>Nos coordonnées</h2>
+      <div class="contact-details">
+        <p><i class="fas fa-map-marker-alt"></i> #101, Rue Louverture, Petite Rivière de l'Artibonite, Haïti</p>
+        <p><i class="fas fa-phone"></i> (509) 49 11 13 90</p>
+        <p><i class="fas fa-envelope"></i> avopps12@gmail.com</p>
+        <p><i class="fas fa-clock"></i> Lundi – Vendredi : 8h00 – 16h00</p>
+      </div>
+
+      <div class="social-links">
+        <h3>Suivez-nous</h3>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
         </div>
-    </footer>
+      </div>
 
-    <script src="js/main.js"></script>
+      <h2 style="margin-top:2.5rem;">Nous trouver</h2>
+      <address style="font-style:normal; color:var(--gray-3); font-size:.9rem; margin:.5rem 0 1rem;">
+        101, Rue Louverture<br>Petite Rivière de l'Artibonite, Haïti
+      </address>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.756052099904!2d-72.48188!3d19.12462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eb6b1e0f0b1e0f1%3A0x1234567890abcdef!2sRue%20Louverture%2C%20Petite%20Rivi%C3%A8re%20de%20l'Artibonite%2C%20Ha%C3%AFti!5e0!3m2!1sfr!2sht!4v1646051602192!5m2!1sfr!2sht"
+        allowfullscreen="" loading="lazy">
+      </iframe>
+    </section>
 
-    <script src="js/contact.js"></script>
+    <section class="contact-form-section">
+      <h2>Envoyez-nous un message</h2>
+      <form id="contact-form" class="contact-form">
+        <div class="form-group">
+          <label for="name">Nom complet *</label>
+          <input type="text" id="name" name="name" required placeholder="Jean Dupont">
+        </div>
+        <div class="form-group">
+          <label for="email">Adresse email *</label>
+          <input type="email" id="email" name="email" required placeholder="jean@exemple.com">
+        </div>
+        <div class="form-group">
+          <label for="subject">Objet</label>
+          <select id="subject" name="subject">
+            <option value="information">Demande d'information</option>
+            <option value="consultation">Demande de consultation</option>
+            <option value="partnership">Proposition de partenariat</option>
+            <option value="donation">Don / Support financier</option>
+            <option value="other">Autre</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" required placeholder="Votre message…"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Envoyer le message</button>
+        <div class="form-message"></div>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section footer-about">
+        <h3>AVOPPS</h3>
+        <p>Action et Volontariat de Prise en Charge Psychosociale — Petite Rivière de l'Artibonite, Haïti. Programmes de soutien psychosocial, d'éducation et d'économie solidaire depuis 2013.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-section footer-links">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right"></i> Nos services</a></li>
+          <li><a href="realisations.html"><i class="fas fa-chevron-right"></i> Réalisations</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section footer-contact">
+        <h3>Contactez-nous</h3>
+        <p><i class="fas fa-map-marker-alt"></i> #101, Rue Louverture, Petite Rivière de l'Artibonite, Haïti</p>
+        <p><i class="fas fa-phone"></i> (509) 49 11 13 90</p>
+        <p><i class="fas fa-envelope"></i> avopps12@gmail.com</p>
+        <p><i class="fas fa-clock"></i> Lun–Ven : 8h00 – 16h00</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 AVOPPS. Tous droits réservés. | <a href="#">Politique de confidentialité</a> | <a href="#">Conditions d'utilisation</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

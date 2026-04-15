@@ -1,126 +1,227 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AVOPPS - Action et Volontariat de Prise en Charge Psychosociale</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" type="image/png" href="pictures/image.png">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AVOPPS — Action et Volontariat de Prise en Charge Psychosociale</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="pictures/image.png">
 </head>
 <body>
-    <header class="header">
-        <div class="logo-container">
-            <img src="pictures/image.png" alt="Logo AVOPPS" class="logo">
-            <div class="org-name">
-                <h1>AVOPPS</h1>
-                <p>Action et Volontariat de Prise en Charge Psychosociale</p>
-            </div>
+
+  <!-- HEADER -->
+  <header class="header" id="mainHeader">
+    <div class="header-inner">
+      <div class="logo-container">
+        <img src="pictures/image.png" alt="Logo AVOPPS" class="logo">
+        <div class="org-name">
+          <h1>AVOPPS</h1>
+          <p>Action et Volontariat de Prise en Charge Psychosociale</p>
         </div>
-        
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Accueil</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="realisations.html">Réalisations</a></li>
-                <!-- <li><a href="resources.html">Ressources</a></li>   -->
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Promouvoir le bien-être des communautés</h2>
-            <p>Soutien psychosocial, éducation et économie sociale solidaire</p>
-            <a href="contact.html" class="btn">Nous contacter</a>
+      </div>
+      <nav class="navbar">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="active">Accueil</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="burger" id="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
         </div>
-    </section>
+      </nav>
+    </div>
+  </header>
 
-    <section class="mission">
-        <h2>Notre Mission</h2>
-        <div class="mission-content">
-            <p>Promouvoir le bien-être des communautés par un soutien psychosocial permanent, une lutte constante pour un accès équitable à l'éducation et une autonomisation économique et financière progressive par des initiatives d'économie sociale solidaire.</p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <span class="hero-tag">Haïti · Artibonite · depuis 2013</span>
+      <h2>Soutien psychosocial,<br>éducation et <em>économie solidaire</em></h2>
+      <p class="hero-desc">AVOPPS intervient dans les communautés de l'Artibonite à travers des programmes de prise en charge, de formation et d'accompagnement économique.</p>
+      <div class="hero-actions">
+        <a href="realisations.html" class="btn"><i class="fas fa-folder-open"></i> Nos réalisations</a>
+        <a href="contact.html" class="btn-ghost"><i class="fas fa-phone-alt"></i> Nous contacter</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="pictures/AService_économie1.jpg" alt="Activité de formation AVOPPS">
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-band" id="statsBand">
+    <div class="stats-band-inner stagger">
+      <div class="stat-item" style="--i:0">
+        <div class="stat-number"><span class="counter" data-target="12">0</span><span class="stat-suffix"> ans</span></div>
+        <div class="stat-label">d'engagement à Petite Rivière de l'Artibonite</div>
+      </div>
+      <div class="stat-item" style="--i:1">
+        <div class="stat-number"><span class="counter" data-target="6">0</span><span class="stat-suffix"> projets</span></div>
+        <div class="stat-label">documentés dans trois domaines d'intervention</div>
+      </div>
+      <div class="stat-item" style="--i:2">
+        <div class="stat-number"><span class="counter" data-target="20">0</span><span class="stat-suffix">+</span></div>
+        <div class="stat-label">écoles participantes au Génie scolaire annuel</div>
+      </div>
+      <div class="stat-item" style="--i:3">
+        <div class="stat-number"><span class="counter" data-target="30">0</span></div>
+        <div class="stat-label">commerçants formés via le projet ATECPRA</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MISSION -->
+  <section class="mission">
+    <div class="mission-grid">
+      <div class="mission-body fade-left">
+        <div class="section-header">
+          <span class="tag">Qui sommes-nous</span>
+          <h2 class="section-title">Notre mission</h2>
+          <div class="h-rule"></div>
         </div>
-    </section>
-
-    <section class="services-preview">
-        <h2>Nos Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-heart"></i>
-                <h3>Prise en charge psychosociale</h3>
-                <p>Consultations individuelles, groupes de parole et accompagnement des victimes de traumatismes.</p>
-                <a href="services.html#psychosocial" class="btn-small">En savoir plus</a>
+        <p>AVOPPS œuvre pour le bien-être des communautés de Petite Rivière de l'Artibonite par un soutien psychosocial permanent, une lutte pour l'accès équitable à l'éducation et une autonomisation économique par des initiatives d'économie sociale solidaire.</p>
+        <p>Nos projets sont conduits en partenariat avec des organisations locales — dont KPLL (Konbit Pou Lapè Lakay) — et bénéficient du soutien du consortium TPFA et de l'Union européenne.</p>
+        <div class="key-facts">
+          <div class="key-fact">
+            <div class="key-fact-icon"><i class="fas fa-handshake"></i></div>
+            <div>
+              <h4>Partenariats documentés</h4>
+              <p>KPLL, consortium TPFA, CISV, PROGETTOMONDO, GVC, CONHANE.</p>
             </div>
-            <div class="service-card">
-                <i class="fas fa-graduation-cap"></i>
-                <h3>Éducation et formation</h3>
-                <p>Programmes éducatifs, alphabétisation adulte et formation professionnelle.</p>
-                <a href="services.html#education" class="btn-small">En savoir plus</a>
+          </div>
+          <div class="key-fact">
+            <div class="key-fact-icon"><i class="fas fa-map-pin"></i></div>
+            <div>
+              <h4>Ancrage local</h4>
+              <p>Toutes nos interventions sont conduites à Petite Rivière de l'Artibonite.</p>
             </div>
-            <div class="service-card">
-                <i class="fas fa-hands-helping"></i>
-                <h3>Économie sociale solidaire</h3>
-                <p>Projets communautaires et accompagnement à l'entrepreneuriat social.</p>
-                <a href="services.html#economie" class="btn-small">En savoir plus</a>
+          </div>
+          <div class="key-fact">
+            <div class="key-fact-icon"><i class="fas fa-euro-sign"></i></div>
+            <div>
+              <h4>Financements vérifiables</h4>
+              <p>Cofinancement Union européenne dans le cadre du programme TPFA.</p>
             </div>
+          </div>
         </div>
-    </section>
+        <a href="services.html" class="btn" style="margin-top:2.5rem;">Découvrir nos programmes</a>
+      </div>
 
-    <section class="news">
-        <h2>Réalisations</h2>
-        <div class="news-grid" id="news-container">
-            <!-- via JavaScript -->
+      <div class="mission-visual fade-right">
+        <img src="pictures/Prise_en_charge.jpg" alt="Accompagnement psychosocial — AVOPPS" class="mission-img">
+        <div class="mission-stamp">
+          <strong>2013</strong>
+          <span>Année de fondation</span>
         </div>
-        <a href="realisations.html" class="btn">Voir toutes les actualités</a>
-    </section>
+      </div>
+    </div>
+  </section>
 
+  <!-- SERVICES -->
+  <section class="services-preview">
+    <div class="section-header center fade-up">
+      <span class="tag">Trois axes d'intervention</span>
+      <h2 class="section-title">Nos services</h2>
+      <div class="h-rule"></div>
+      <p class="lead">Des programmes concrets menés directement sur le terrain depuis 2013.</p>
+    </div>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section footer-about">
-                <h3>À propos d'AVOPPS</h3>
-                <p>Action et Volontariat de Prise en Charge Psychosociale, œuvrant pour le bien-être des communautés à travers des programmes de soutien psychosocial, d'éducation et d'économie solidaire.</p>
-                <div class="footer-social">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
+    <div class="services-grid stagger">
+      <div class="service-card fade-up" style="--i:0">
+        <div class="service-num">01</div>
+        <div class="service-icon-box"><i class="fas fa-heart"></i></div>
+        <h3>Prise en charge psychosociale</h3>
+        <p>Appui aux familles déplacées, groupes de parole et accompagnement des victimes de traumatismes — notamment en partenariat avec KPLL lors des crises d'insécurité dans l'Artibonite.</p>
+        <a href="services.html#psychosocial" class="btn-sm">En savoir plus <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card fade-up" style="--i:1">
+        <div class="service-num">02</div>
+        <div class="service-icon-box"><i class="fas fa-graduation-cap"></i></div>
+        <h3>Éducation et formation</h3>
+        <p>Orientation professionnelle pour 100 jeunes par an, concours du Génie scolaire avec plus de 20 écoles participantes, et séminaires animés par des spécialistes locaux.</p>
+        <a href="services.html#education" class="btn-sm">En savoir plus <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card fade-up" style="--i:2">
+        <div class="service-num">03</div>
+        <div class="service-icon-box"><i class="fas fa-store"></i></div>
+        <h3>Économie sociale solidaire</h3>
+        <p>Formation en gestion financière et marketing (projet ATECPRA). 11 commerçants ont reçu un appui de 24 000 gourdes, grâce au financement de l'UE via le consortium TPFA.</p>
+        <a href="services.html#economie" class="btn-sm">En savoir plus <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
 
-            <div class="footer-section footer-links">
-                <h3>Liens rapides</h3>
-                <ul>
-                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
-                    <li><a href="services.html"><i class="fas fa-chevron-right"></i> Nos services</a></li>
-                    <li><a href="resources.html"><i class="fas fa-chevron-right"></i> Ressources</a></li>
-                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+  <!-- RÉALISATIONS -->
+  <section class="news">
+    <div class="section-header center fade-up">
+      <span class="tag">Projets récents</span>
+      <h2 class="section-title">Réalisations</h2>
+      <div class="h-rule"></div>
+    </div>
+    <div class="news-grid" id="news-container"></div>
+    <a href="realisations.html" class="btn fade-up" style="margin-top:0;">Voir toutes les réalisations</a>
+  </section>
 
-                </ul>
-            </div>
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="cta-band-inner">
+      <div class="fade-up">
+        <h2>Vous souhaitez soutenir notre travail ?</h2>
+        <p>Bénévoles, partenaires ou donateurs — contactez-nous pour discuter de la meilleure façon de contribuer aux projets en cours à Petite Rivière de l'Artibonite.</p>
+      </div>
+      <div class="cta-actions fade-up">
+        <a href="contact.html" class="btn"><i class="fas fa-envelope"></i> Prendre contact</a>
+        <a href="realisations.html" class="btn-ghost"><i class="fas fa-folder-open"></i> Nos projets</a>
+      </div>
+    </div>
+  </section>
 
-            <div class="footer-section footer-contact">
-                <h3>Contactez-nous</h3>
-                <p><i class="fas fa-map-marker-alt"></i> #101, Rue Louverture, Petite Rivière de l'Artibonite, Haïti</p>
-                <p><i class="fas fa-phone"></i> (509) 49 11 13 90</p>
-                <p><i class="fas fa-envelope"></i> avopps12@gmail.com</p>
-                <p><i class="fas fa-clock"></i> Lundi-Vendredi: 8h00-16h00</p>
-            </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="footer-logo-row">
+          <img src="pictures/image.png" alt="Logo AVOPPS">
+          <strong>AVOPPS</strong>
         </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2025 AVOPPS. Tous droits réservés. | <a href="#">Politique de confidentialité</a> | <a href="#">Conditions d'utilisation</a></p>
+        <p>Action et Volontariat de Prise en Charge Psychosociale — Petite Rivière de l'Artibonite, Haïti. Programmes de soutien psychosocial, d'éducation et d'économie solidaire depuis 2013.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
         </div>
-    </footer>
+      </div>
 
-    <script src="js/main.js"></script>
+      <div class="footer-col">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right"></i> Nos services</a></li>
+          <li><a href="realisations.html"><i class="fas fa-chevron-right"></i> Réalisations</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contactez-nous</h3>
+        <address>
+          <p><i class="fas fa-map-marker-alt"></i> #101, Rue Louverture, Petite Rivière de l'Artibonite, Haïti</p>
+          <p><i class="fas fa-phone"></i> (509) 49 11 13 90</p>
+          <p><i class="fas fa-envelope"></i> avopps12@gmail.com</p>
+          <p><i class="fas fa-clock"></i> Lun–Ven : 8h00 – 16h00</p>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 AVOPPS. Tous droits réservés. | <a href="#">Politique de confidentialité</a> | <a href="#">Conditions d'utilisation</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
