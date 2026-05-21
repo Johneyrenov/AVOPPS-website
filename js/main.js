@@ -3,23 +3,29 @@
    ============================================ */
 
 /* ------- Burger / Mobile Nav ------- */
-const burger   = document.getElementById('burger');
-const navLinks = document.getElementById('navLinks');
+const burger      = document.getElementById('burger');
+const navLinks    = document.getElementById('navLinks');
+const navBackdrop = document.getElementById('navBackdrop');
+
+function closeNav() {
+  navLinks?.classList.remove('active');
+  burger?.classList.remove('toggle');
+  navBackdrop?.classList.remove('active');
+}
 
 if (burger && navLinks) {
   burger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     burger.classList.toggle('toggle');
+    navBackdrop?.classList.toggle('active');
   });
 
-  // Close nav on link click
   navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-      burger.classList.remove('toggle');
-    });
+    link.addEventListener('click', closeNav);
   });
 }
+
+navBackdrop?.addEventListener('click', closeNav);
 
 /* ------- Header scroll effect ------- */
 const header = document.getElementById('mainHeader');
@@ -125,6 +131,17 @@ document.addEventListener('DOMContentLoaded', () => {
     animateObserver.observe(card);
   });
 });
+
+/* ------- Back to top ------- */
+const backToTop = document.getElementById('backToTop');
+if (backToTop) {
+  window.addEventListener('scroll', () => {
+    backToTop.classList.toggle('visible', window.scrollY > 400);
+  }, { passive: true });
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
 /* ------- Contact form ------- */
 const contactForm = document.getElementById('contact-form');
